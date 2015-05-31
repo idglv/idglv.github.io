@@ -1,7 +1,7 @@
 (function() {
     "use strict";
 
-    sap.ui.controller("sap.app.view.app", {
+    sap.ui.controller("sap.app.desktopView.app", {
         onInit: function() {
             var aColumnData = [{
                 columnId: "id",
