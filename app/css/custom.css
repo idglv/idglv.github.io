@@ -25,10 +25,12 @@
 }
 
 .background-right {
-  position: absolute;
-  margin-left: 100%;
-  left: -140px;
-  width: 140px;
-  height: 100%;
-  overflow: hidden;
+	position: absolute;
+	margin-left: 100%;
+	left: -140px;
+	width: 140px;
+	height: 100%;
+	overflow: hidden;
+	top: 0;
+	z-index: -1;
 }
