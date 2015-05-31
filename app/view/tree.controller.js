@@ -2,7 +2,7 @@ sap.ui.controller("sap.app.view.tree", {
 	onInit: function() {
         this.oModel = new sap.ui.model.json.JSONModel();
 
-        jQuery.getJSON("./data/tree.json", function(tree) {
+        sap.app.util.rawToTree(function(tree) {
             this.oModel.setData({
                 tree: tree
             });

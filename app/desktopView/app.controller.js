@@ -23,7 +23,17 @@
 
             var oModel = new sap.ui.model.json.JSONModel();
 
-            jQuery.getJSON("./data/tree.json", function(tree) {
+            // jQuery.getJSON("./data/tree.json", function(tree) {
+            //     oModel.setData({
+            //         columns: aColumnData,
+            //         rows: sap.app.util.tableGenerator(300),
+            //         tree: tree
+            //     });
+
+            //     this.getView().setModel(oModel);
+            // }.bind(this));
+
+            sap.app.util.rawToTree(function(tree) {
                 oModel.setData({
                     columns: aColumnData,
                     rows: sap.app.util.tableGenerator(300),

@@ -58,6 +58,7 @@ sap.ui.core.UIComponent.extend("sap.app.Component", {
         jQuery.sap.require("sap.m.routing.RouteMatchedHandler");
         jQuery.sap.require("sap.ui.core.routing.HashChanger");
         jQuery.sap.require("sap.app.util.tableGenerator");
+        jQuery.sap.require("sap.app.util.rawToTree");
         jQuery.sap.includeStyleSheet("css/custom.css");
 
         //call createContent
@@ -80,9 +81,6 @@ sap.ui.core.UIComponent.extend("sap.app.Component", {
             type: "JS",
             viewData: {component: this}
         });
-
-        //Localize client
-        var locale = sap.ui.getCore().getConfiguration().getLanguage();
 
         return oView;
 
