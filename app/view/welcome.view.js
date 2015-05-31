@@ -58,11 +58,7 @@ sap.ui.jsview("sap.app.view.welcome", {
 				new sap.m.Table(this.createId("table"), {
 					growingThreshold: 10,
 					growingScrollToLoad : false,
-					columns: oColumns/*,
-					items: {
-						path: "/table",
-						template: oTemplate
-					}*/
+					columns: oColumns
 				})
 			]
 		});

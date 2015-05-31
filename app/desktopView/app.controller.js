@@ -28,54 +28,55 @@
             	aData.push(this.generateTable(id))
             }
 
-            var aTree = [{
-            	name: "Единая модель объектов ТХГ(ЕМ ТХГ)",
-            	hasExpander: true,
-            	next: [{
-                	name: "Класификация объектов ТХГ",
-                	hasExpander: true,
-                	next: [{
-                		name: "Единая система газоснабжения",
-                		hasExpander: false,
-                		key: 0
-                	}, {
-                		name: "Линейная часть магистральных трубопроводов",
-                		hasExpander: false,
-                		key: 1
-                	}, {
-                		name: "Газораспределительная станция",
-                		hasExpander: false,
-                		key: 2
-                	}, {
-                		name: "Компрессорная станция",
-                		hasExpander: false,
-                		key: 3
-                	}, {
-                		name: "Объекты добычи газа",
-                		hasExpander: false,
-                		key: 4
-                	}, {
-                		name: "Объекты общего назначения",
-                		hasExpander: false,
-                		key: 5
-                	}, {
-                		name: "Объекты подземного хранения газа",
-                		hasExpander: false,
-                		key: 6
-                	}, {
-                		name: "Линейная часть магистральных трубопроводов",
-                		hasExpander: false,
-                		key: 7
-                	}]
+                    var aTree = [{
+            name: "Единая модель объектов",
+            hasExpander: true,
+            next: [{
+                name: "Класификация объектов",
+                hasExpander: true,
+                next: [{
+                    name: "Линейная часть магистральных труб",
+                    hasExpander: false,
+                    key: 1
+                }, {
+                    name: "Газораспределительная станция",
+                    hasExpander: false,
+                    key: 2
+                }, {
+                    name: "Компрессорная станция",
+                    hasExpander: false,
+                    key: 3
+                }]
+            }, {
+                name: "Единая система газоснабжения",
+                hasExpander: true,
+                next: [{
+                    name: "Объекты добычи газа",
+                    hasExpander: false,
+                    key: 4
+                }, {
+                    name: "Объекты общего назначения",
+                    hasExpander: false,
+                    key: 5
+                }, {
+                    name: "Объекты подземного хранения газа",
+                    hasExpander: false,
+                    key: 6
+                }, {
+                    name: "Линейная часть магистральных труб",
+                    hasExpander: false,
+                    key: 7
                 }]
             }]
+        }];
+
 
 
             var oModel = new sap.ui.model.json.JSONModel();
 
             oModel.setData({
                 columns: aColumnData,
-                rows: aData,
+                rows: sap.app.util.tableGenerator(300),//aData,
                 tree: aTree
             });
 

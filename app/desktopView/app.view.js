@@ -83,12 +83,19 @@
 					span: "L12 M12 S12"
 				}),
 			}).addStyleClass("logo");
+
+			var Logo = new sap.ui.commons.Image({
+				src: "img/logo.png",
+				layoutData: new sap.ui.layout.GridData({
+					span: "L12 M12 S12"
+				})
+			});
 			
 		    //grid
 		    var oGrid = new sap.ui.layout.Grid({
 		    	hSpacing: 1,
 				vSpacing: 1,
-		    	content: [oPanel, oTree, oTable]
+		    	content: [Logo, oTree, oTable]
 		    });
 
 			return oGrid;

@@ -11,12 +11,17 @@
 	background-image: none;
 }
 
+.sapMSLITitleOnly {
+	font-size: 1rem;
+}
+
 .background-left {
 	position: absolute;
 	left: 0;
 	width: 140px;
 	height: 100%;
 	overflow: hidden;
+	z-index: -1;
 }
 
 .background-left>img {

@@ -1,13 +1,13 @@
 sap.ui.controller("sap.app.view.tree", {
 	onInit: function() {
 		var aTree = [{
-        	name: "Единая модель объектов ТХГ(ЕМ ТХГ)",
+        	name: "Единая модель объектов",
         	hasExpander: true,
         	next: [{
-            	name: "Класификация объектов ТХГ",
+            	name: "Класификация объектов",
             	hasExpander: true,
             	next: [{
-            		name: "Линейная часть магистральных трубопроводов",
+            		name: "Линейная часть магистральных труб",
             		hasExpander: false,
             		key: 1
             	}, {
@@ -21,7 +21,7 @@ sap.ui.controller("sap.app.view.tree", {
             	}]
             }, {
             	name: "Единая система газоснабжения",
-        		hasExpander: true,
+				hasExpander: true,
             	next: [{
             		name: "Объекты добычи газа",
             		hasExpander: false,
@@ -35,7 +35,7 @@ sap.ui.controller("sap.app.view.tree", {
             		hasExpander: false,
             		key: 6
             	}, {
-            		name: "Линейная часть магистральных трубопроводов",
+            		name: "Линейная часть магистральных труб",
             		hasExpander: false,
             		key: 7
             	}]
