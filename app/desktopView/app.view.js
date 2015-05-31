@@ -85,7 +85,7 @@
 			}).addStyleClass("logo");
 
 			var Logo = new sap.ui.commons.Image({
-				src: "img/logo.png",
+				src: "img/gazprom_logo_140.png",
 				layoutData: new sap.ui.layout.GridData({
 					span: "L12 M12 S12"
 				})
