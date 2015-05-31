@@ -23,3 +23,12 @@
 	position: absolute;
 	margin-left: -140px;
 }
+
+.background-right {
+  position: absolute;
+  margin-left: 100%;
+  left: -140px;
+  width: 140px;
+  height: 100%;
+  overflow: hidden;
+}
