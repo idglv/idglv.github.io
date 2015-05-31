@@ -1,54 +1,17 @@
 sap.ui.controller("sap.app.view.tree", {
 	onInit: function() {
-		var aTree = [{
-        	name: "Единая модель объектов",
-        	hasExpander: true,
-        	next: [{
-            	name: "Класификация объектов",
-            	hasExpander: true,
-            	next: [{
-            		name: "Линейная часть магистральных труб",
-            		hasExpander: false,
-            		key: 1
-            	}, {
-            		name: "Газораспределительная станция",
-            		hasExpander: false,
-            		key: 2
-            	}, {
-            		name: "Компрессорная станция",
-            		hasExpander: false,
-            		key: 3
-            	}]
-            }, {
-            	name: "Единая система газоснабжения",
-				hasExpander: true,
-            	next: [{
-            		name: "Объекты добычи газа",
-            		hasExpander: false,
-            		key: 4
-            	}, {
-            		name: "Объекты общего назначения",
-            		hasExpander: false,
-            		key: 5
-            	}, {
-            		name: "Объекты подземного хранения газа",
-            		hasExpander: false,
-            		key: 6
-            	}, {
-            		name: "Линейная часть магистральных труб",
-            		hasExpander: false,
-            		key: 7
-            	}]
-            }]
-        }]
+        this.oModel = new sap.ui.model.json.JSONModel();
 
-		this.oModel = new sap.ui.model.json.JSONModel({
-			tree: aTree
-		});
-		this.getView().setModel(this.oModel);
+        jQuery.getJSON("./data/tree.json", function(tree) {
+            this.oModel.setData({
+                tree: tree
+            });
+
+            this.getView().setModel(this.oModel);
+        }.bind(this));
 
 		this.cache();
-		
+
 		this.state = [];
 	},
 
@@ -61,7 +24,7 @@ sap.ui.controller("sap.app.view.tree", {
 
 		this.navContainer = this.getView().byId("navContainer");
 	},
-	
+
 	handleNavButtonPress: function(e) {
 		var currentPage = this.list.getParent();
 		
