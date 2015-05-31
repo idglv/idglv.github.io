@@ -5,3 +5,21 @@
 .sapUiPanelHdrEmph {
 	border-bottom: none;
 }
+
+.sapUiBody {
+	background-color: #fff;
+	background-image: none;
+}
+
+.background-left {
+	position: absolute;
+	left: 0;
+	width: 140px;
+	height: 100%;
+	overflow: hidden;
+}
+
+.background-left>img {
+	position: absolute;
+	margin-left: -140px;
+}
