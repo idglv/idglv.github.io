@@ -31,4 +31,13 @@
 			<span class="main-text">Нет</span>
 		</div>
 	</body>
+	<script>
+		(function() {
+			var hash = location.hash;
+			if (hash.length > 1) {
+				var mainElement = document.getElementsByClassName("main-text")[0];
+				mainElement.innerText = hash.slice(1);
+			}
+		})();
+	</script>
 </html>
