@@ -28,16 +28,26 @@
 	</style>
 	<body>
 		<div class="content">
-			<span class="main-text">Нет</span>
+			<span class="main-text">No</span>
 		</div>
 	</body>
 	<script>
 		(function() {
 			var hash = location.hash;
+			var mainElement;
+			mainElement = document.getElementsByClassName("main-text")[0];
 			if (hash.length > 1) {
-				var mainElement = document.getElementsByClassName("main-text")[0];
 				mainElement.innerText = hash.slice(1);
 			}
+			var size;
+			var len = hash.length;
+			if (len < 6) size = "28rem";
+			if (len > 6 && len < 8) size = "25rem";
+			if (len > 8 && len < 10) size = "20rem";
+			if (len > 10 && len < 12) size = "16rem";
+			if (len > 12) size = "14rem";
+
+			mainElement.style.fontSize = size;
 		})();
 	</script>
 </html>
