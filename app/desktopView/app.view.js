@@ -18,7 +18,7 @@
 		createContent : function(oController) {
 			//tree
 			var oTree = new sap.ui.commons.Tree({
-				title: "ОАО \"Газпром\"",
+				title: "",
 				height: "315px",
 				layoutData: new sap.ui.layout.GridData({
 					span: "L4 M4 S4"
@@ -91,12 +91,12 @@
 				})
 			});
 			
-		    //grid
-		    var oGrid = new sap.ui.layout.Grid({
-		    	hSpacing: 1,
+			//grid
+			var oGrid = new sap.ui.layout.Grid({
+				hSpacing: 1,
 				vSpacing: 1,
-		    	content: [Logo, oTree, oTable]
-		    });
+				content: [/*Logo, */oTree, oTable]
+			});
 
 			return oGrid;
 		}
