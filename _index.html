@@ -35,8 +35,7 @@
 		(function() {
 			function changeText() {
 				var hash = location.hash;
-				var mainElement;
-				mainElement = document.getElementsByClassName("main-text")[0];
+				var mainElement = document.getElementsByClassName("main-text")[0];
 				if (hash.length > 1) {
 					mainElement.innerText = hash.slice(1);
 				}
