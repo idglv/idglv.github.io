@@ -18,11 +18,6 @@
 			font-size: 28rem;
 			display: table-cell;
 			vertical-align: middle;
-			-webkit-touch-callout: none;
-			-webkit-user-select: none;
-			-khtml-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
 			user-select: none;
 			cursor: default;
 		}
@@ -37,17 +32,17 @@
 			function changeText() {
 				var hash = location.hash;
 				var mainElement = document.getElementsByClassName("main-text")[0];
+				var size;
+				var len = hash.length;
+
 				if (hash.length > 1) {
 					mainElement.innerText = hash.slice(1);
 				}
-				var size;
-				var len = hash.length;
 				if (len < 6) size = "28rem";
 				if (len > 6 && len < 8) size = "25rem";
 				if (len > 8 && len < 10) size = "20rem";
 				if (len > 10 && len < 12) size = "16rem";
 				if (len > 12) size = "12rem";
-
 				mainElement.style.fontSize = size;
 			}
 			window.addEventListener("hashchange", changeText, false);
