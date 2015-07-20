@@ -1,64 +1,54 @@
 (function() {
-    "use strict";
+  "use strict";
 
-    sap.ui.controller("sap.app.desktopView.app", {
-        onInit: function() {
-            var aColumnData = [{
-                columnId: "id",
-                columnText: "Идентификатор",
-                width: "20%"
-            }, {
-                columnId: "short",
-                columnText: "Наименование краткое",
-                width: "25%"
-            }, {
-                columnId: "name",
-                columnText: "Наименование полное",
-                width: "35%"
-            }, {
-                columnId: "tag",
-                columnText: "Ключевые слова",
-                width: "20%"
-            }];
+  sap.ui.controller("sap.app.desktopView.app", {
+    onInit: function() {
+      var aColumnData = [{
+        columnId: "id",
+        columnText: "Идентификатор",
+        width: "20%"
+      }, {
+        columnId: "short",
+        columnText: "Наименование краткое",
+        width: "25%"
+      }, {
+        columnId: "name",
+        columnText: "Наименование полное",
+        width: "35%"
+      }, {
+        columnId: "tag",
+        columnText: "Ключевые слова",
+        width: "20%"
+      }];
 
-            var oModel = new sap.ui.model.json.JSONModel();
+      var oModel = new sap.ui.model.json.JSONModel();
 
-            // jQuery.getJSON("./data/tree.json", function(tree) {
-            //     oModel.setData({
-            //         columns: aColumnData,
-            //         rows: sap.app.util.tableGenerator(300),
-            //         tree: tree
-            //     });
+      sap.app.util.rawToTree(function(tree) {
+        oModel.setData({
+          columns: aColumnData,
+          rows: sap.app.util.tableGenerator(300),
+          tree: tree
+        });
 
-            //     this.getView().setModel(oModel);
-            // }.bind(this));
+        this.getView().setModel(oModel);
+      }.bind(this));
 
-            sap.app.util.rawToTree(function(tree) {
-                oModel.setData({
-                    columns: aColumnData,
-                    rows: sap.app.util.tableGenerator(300),
-                    tree: tree
-                });
+      this.cache();
+    },
 
-                this.getView().setModel(oModel);
-            }.bind(this));
+    cache: function() {
+      this.mainTable = this.getView().byId("mainTable");
+    },
 
-            this.cache();
-        },
+    handleSelectTree: function(e) {
+      var key = e.getParameter("node").data("key");
 
-        cache: function() {
-        	this.mainTable = this.getView().byId("mainTable");
-        },
-
-        handleSelectTree: function(e) {
-        	var key = e.getParameter("node").data("key");
-        	
-        	this.mainTable.bindAggregation("rows", {
-		    	path: "/rows",
-		    	sorter: [new sap.ui.model.Sorter("id", false)],
-		    	filters: [new sap.ui.model.Filter("key", "EQ", key)]
-		    });
-        }
-    });
+      this.mainTable.bindAggregation("rows", {
+        path: "/rows",
+        sorter: [new sap.ui.model.Sorter("id", false)],
+        filters: [new sap.ui.model.Filter("key", "EQ", key)]
+      });
+    }
+  });
 
 })()
