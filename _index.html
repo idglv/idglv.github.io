@@ -15,7 +15,7 @@
 		}
 		.main-text {
 			font-family: Verdana,sans-serif;
-			font-size: 28rem;
+			font-size: 28em;
 			display: table-cell;
 			vertical-align: middle;
 			user-select: none;
@@ -38,13 +38,8 @@
 					mainElement.innerText = hash.slice(1);
 				}
 
-				var size;
-				if (len < 6) size = "28rem";
-				if (len > 6 && len < 8) size = "25rem";
-				if (len > 8 && len < 10) size = "20rem";
-				if (len > 10 && len < 12) size = "16rem";
-				if (len > 12) size = "12rem";
-				mainElement.style.fontSize = size;
+				var size = 28 * (3 / len); 
+				mainElement.style.fontSize = size + "em";
 			}
 			window.addEventListener("hashchange", changeText, false);
 			changeText();
