@@ -32,7 +32,7 @@
 			function changeText() {
 				var hash = location.hash;
 				var len = hash.length;
-				var mainElement = document.getElementsByClassName("main-text")[0];
+				var mainElement = document.querySelector(".main-text");
 
 				if (len > 1) {
 					mainElement.innerText = hash.slice(1);
