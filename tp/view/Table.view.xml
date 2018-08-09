@@ -1,0 +1,78 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tp.TrainingProgram.controller.Table"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:fb="sap.ui.comp.filterbar" xmlns:c="tp.TrainingProgram.control">
+	<Page>
+		<fb:FilterBar reset="onReset" search="onSearch" showRestoreButton="true" showClearButton="true">
+			<!--<fb:filterItems>-->
+			<!--	<fb:FilterItem name="A" label="Delivery Date">-->
+			<!--		<fb:control>-->
+			<!--			<DatePicker/>-->
+			<!--		</fb:control>-->
+			<!--	</fb:FilterItem>-->
+			<!--	<fb:FilterItem name="B" label="Region" labelTooltip="Tooltip Example" mandatory="true">-->
+			<!--		<fb:control>-->
+			<!--			<ComboBox>-->
+			<!--				<items>-->
+			<!--					<core:Item key="001" text="EMEA"/>-->
+			<!--					<core:Item key="002" text="America"/>-->
+			<!--					<core:Item key="003" text="APJ"/>-->
+			<!--				</items>-->
+			<!--			</ComboBox>-->
+			<!--		</fb:control>-->
+			<!--	</fb:FilterItem>-->
+			<!--</fb:filterItems>-->
+			<fb:filterGroupItems>
+				<fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="A" label="Company" labelTooltip="Tooltip GroupItem Example">
+					<fb:control>
+						<Input type="Text"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="G1" groupTitle="Group1" name="B" label="Customer">
+					<fb:control>
+						<Input type="Text"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="A2" label="Supplier" labelTooltip="Tooltip GroupItem Example">
+					<fb:control>
+						<Input type="Text"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+				<fb:FilterGroupItem groupName="G2" groupTitle="Group2" name="B2" label="Category">
+					<fb:control>
+						<Input type="Text"/>
+					</fb:control>
+				</fb:FilterGroupItem>
+			</fb:filterGroupItems>
+		</fb:FilterBar>
+		<VBox class="sapUiMediumSmallTopBottom">
+			<core:Fragment fragmentName="tp.TrainingProgram.fragment.Legend" type="XML"/>
+		</VBox>
+		<Table columns="{path:'/columns', factory:'.factoryColumn'}" items="{/items}" sticky="ColumnHeaders" fixedLayout="false">
+			<items>
+				<ColumnListItem type="Navigation" press="handleColumnListItemPress">
+					<cells>
+						<VBox>
+							<Text text="{position_num}"/>
+							<Text text="{position_text}({position_id})"/>
+							<Text text="{position_status}">
+								<customData>
+									<core:CustomData key="color" value="green" writeToDom="true"/>
+								</customData>
+							</Text>
+						</VBox>
+						<Text text="{department_text}({department_id})"/>
+						<Text text="{cost_center_text}({cost_center_id})"/>
+						<Text text="{location_text}({location_id})"/>
+						<Text text="{incumbent_text}({incumbent_id})"/>
+						<Text text="{status}"/>
+						<HBox>
+							<c:Indicator type="FullPosition" class="margin-right-1"/>
+							<c:Indicator type="FullPosition" class="margin-right-1"/>
+							<c:Indicator type="FullPosition" class="margin-right-1"/>
+							<c:Indicator type="FullPosition" class="margin-right-1"/>
+						</HBox>
+					</cells>
+				</ColumnListItem>
+			</items>
+		</Table>
+	</Page>
+</mvc:View>

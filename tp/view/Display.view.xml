@@ -1,0 +1,33 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tp.TrainingProgram.controller.Display"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:t="sap.ui.table">
+	<Page showNavButton="true" navButtonPress="handleNavButtonPress">
+		<t:TreeTable rows="{/tree}" visibleRowCountMode="Auto" selectionMode="None">
+			<t:title>
+				<Toolbar>
+					<ToolbarSpacer/>
+					<Text text="{i18n>DISPLAY_LOOKUP}:"/>
+					<SegmentedButton selectedKey="today">
+						<items>
+							<SegmentedButtonItem text="{i18n>DISPLAY_TODAY}" key="today"/>
+							<SegmentedButtonItem text="{i18n>DISPLAY_FORECAST}" key="forecast"/>
+						</items>
+					</SegmentedButton>
+				</Toolbar>
+			</t:title>
+			<t:columns>
+				<t:Column label="Cost Center" width="200px">
+					<t:template>
+						<Text text="{cost_center_text} ({cost_center_id})"/>
+					</t:template>
+				</t:Column>
+				<t:Column label="Job Code" template="job_code"/>
+				<t:Column label="Location" template="location_text"/>
+				<t:Column label="Q1 2018" template="q1"/>
+				<t:Column label="Q2 2018" template="q2"/>
+				<t:Column label="Q3 2018" template="q3"/>
+				<t:Column label="Q4 2018" template="q4"/>
+				<t:Column label="Total" template="total"/>
+			</t:columns>
+		</t:TreeTable>
+	</Page>
+</mvc:View>

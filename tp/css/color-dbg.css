@@ -1,0 +1,7 @@
+span.sapMText[data-color="red"] {
+    color: red;
+}
+
+span.sapMText[data-color="green"] {
+    color: green;
+}

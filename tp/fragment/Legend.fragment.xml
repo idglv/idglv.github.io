@@ -1,0 +1,24 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:c="tp.TrainingProgram.control">
+	<l:Grid defaultSpan="XL2 L2 M4 S6" vSpacing="1" class="sapUiSmallMarginTop">
+		<HBox alignItems="Center">
+			<c:Indicator type="PlanEnhance" class="sapUiTinyMarginEnd"/>
+			<Text text="{i18n>LEGEND_PLAN_ENHANCE}"/>
+		</HBox>
+		<HBox alignItems="Center">
+			<c:Indicator type="PlanReduction" class="sapUiTinyMarginEnd"/>
+			<Text text="{i18n>LEGEND_PLAN_REDUCTION}"/>
+		</HBox>
+		<HBox alignItems="Center">
+			<c:Indicator type="FullPosition" class="sapUiTinyMarginEnd"/>
+			<Text text="{i18n>LEGEND_FULL_POSITION}"/>
+		</HBox>
+		<HBox alignItems="Center">
+			<c:Indicator type="VacantPosition" class="sapUiTinyMarginEnd"/>
+			<Text text="{i18n>LEGEND_VACANT_POSITION}"/>
+		</HBox>
+		<HBox alignItems="Center">
+			<c:Indicator type="Plan" class="sapUiTinyMarginEnd"/>
+			<Text text="{i18n>LEGEND_PLAN}"/>
+		</HBox>
+	</l:Grid>
+</core:FragmentDefinition>

@@ -1,0 +1,224 @@
+{
+    "resources": [
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "control/Indicator-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "control/Indicator.js"
+        },
+        {
+            "name": "controller/App-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/App.controller.js"
+        },
+        {
+            "name": "controller/Display-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/Display.controller.js"
+        },
+        {
+            "name": "controller/Table-dbg.controller.js",
+            "isDebug": true
+        },
+        {
+            "name": "controller/Table.controller.js"
+        },
+        {
+            "name": "css/color-dbg.css",
+            "isDebug": true
+        },
+        {
+            "name": "css/color.css"
+        },
+        {
+            "name": "css/index-dbg.css",
+            "isDebug": true
+        },
+        {
+            "name": "css/index.css"
+        },
+        {
+            "name": "css/indicator-dbg.css",
+            "isDebug": true
+        },
+        {
+            "name": "css/indicator.css"
+        },
+        {
+            "name": "css/margin-dbg.css",
+            "isDebug": true
+        },
+        {
+            "name": "css/margin.css"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "fragment/Legend.fragment.xml"
+        },
+        {
+            "name": "i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "model/json-generator.com-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/json-generator.com.js"
+        },
+        {
+            "name": "model/local.json"
+        },
+        {
+            "name": "model/models-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "model/models.js"
+        },
+        {
+            "name": "neo-app.json"
+        },
+        {
+            "name": "tmp/Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "tmp/Component.js"
+        },
+        {
+            "name": "tmp/control/Indicator.js"
+        },
+        {
+            "name": "tmp/controller/App.controller.js"
+        },
+        {
+            "name": "tmp/controller/Display.controller.js"
+        },
+        {
+            "name": "tmp/controller/Table.controller.js"
+        },
+        {
+            "name": "tmp/css/color.css"
+        },
+        {
+            "name": "tmp/css/index.css"
+        },
+        {
+            "name": "tmp/css/indicator.css"
+        },
+        {
+            "name": "tmp/css/margin.css"
+        },
+        {
+            "name": "tmp/fragment/Legend.fragment.xml"
+        },
+        {
+            "name": "tmp/i18n/i18n.properties",
+            "raw": "i18n/i18n.properties"
+        },
+        {
+            "name": "tmp/index.html"
+        },
+        {
+            "name": "tmp/manifest.json"
+        },
+        {
+            "name": "tmp/model/json-generator.com.js"
+        },
+        {
+            "name": "tmp/model/local.json"
+        },
+        {
+            "name": "tmp/model/models.js"
+        },
+        {
+            "name": "tmp/utils/formatter.js"
+        },
+        {
+            "name": "tmp/view/App.view.xml"
+        },
+        {
+            "name": "tmp/view/Display.view.xml"
+        },
+        {
+            "name": "tmp/view/Table.view.xml"
+        },
+        {
+            "name": "tmp-dbg/Component.js"
+        },
+        {
+            "name": "tmp-dbg/control/Indicator.js"
+        },
+        {
+            "name": "tmp-dbg/controller/App.controller.js"
+        },
+        {
+            "name": "tmp-dbg/controller/Display.controller.js"
+        },
+        {
+            "name": "tmp-dbg/controller/Table.controller.js"
+        },
+        {
+            "name": "tmp-dbg/css/color.css"
+        },
+        {
+            "name": "tmp-dbg/css/index.css"
+        },
+        {
+            "name": "tmp-dbg/css/indicator.css"
+        },
+        {
+            "name": "tmp-dbg/css/margin.css"
+        },
+        {
+            "name": "tmp-dbg/model/json-generator.com.js"
+        },
+        {
+            "name": "tmp-dbg/model/models.js"
+        },
+        {
+            "name": "tmp-dbg/utils/formatter.js"
+        },
+        {
+            "name": "utils/formatter-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "utils/formatter.js"
+        },
+        {
+            "name": "view/App.view.xml"
+        },
+        {
+            "name": "view/Display.view.xml"
+        },
+        {
+            "name": "view/Table.view.xml"
+        }
+    ]
+}
