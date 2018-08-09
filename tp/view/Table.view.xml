@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tp.TrainingProgram.controller.Table"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:fb="sap.ui.comp.filterbar" xmlns:c="tp.TrainingProgram.control">
-	<Page>
+	<Page title="{i18n>TABLE_TITLE}">
 		<fb:FilterBar reset="onReset" search="onSearch" showRestoreButton="true" showClearButton="true">
 			<!--<fb:filterItems>-->
 			<!--	<fb:FilterItem name="A" label="Delivery Date">-->
