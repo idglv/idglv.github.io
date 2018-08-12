@@ -8,8 +8,11 @@ sap.ui.define([
 	return Controller.extend("tp.TrainingProgram.controller.Display", {
 		formatter: formatter,
 
-		handleNavButtonPress: function (oEvent) {
-				this.getOwnerComponent().getRouter().navTo("table", {}, true);
+		handleCellClick: function (oEvent) {
+				var oContext = oEvent.getParameter("rowBindingContext");
+				if (oContext) {
+					this.getOwnerComponent().getRouter().navTo("table");
+				}
 			}
 			/**
 			 * Called when a controller is instantiated and its View controls (if available) are already created.

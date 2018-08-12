@@ -21,8 +21,8 @@ sap.ui.define([
 			}, properties));
 		},
 
-		handleColumnListItemPress: function (oEvent) {
-				this.getOwnerComponent().getRouter().navTo("display");
+		handleNavButtonPress: function () {
+				this.getOwnerComponent().getRouter().navTo("display", {}, true);
 			}
 			/**
 			 * Called when a controller is instantiated and its View controls (if available) are already created.

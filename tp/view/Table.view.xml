@@ -1,6 +1,6 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tp.TrainingProgram.controller.Table"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:fb="sap.ui.comp.filterbar" xmlns:c="tp.TrainingProgram.control">
-	<Page title="{i18n>TABLE_TITLE}">
+	<Page title="{i18n>TABLE_TITLE}" showNavButton="true" navButtonPress="handleNavButtonPress">
 		<fb:FilterBar reset="onReset" search="onSearch" showRestoreButton="true" showClearButton="true">
 			<!--<fb:filterItems>-->
 			<!--	<fb:FilterItem name="A" label="Delivery Date">-->
@@ -48,7 +48,7 @@
 		</VBox>
 		<Table columns="{path:'/columns', factory:'.factoryColumn'}" items="{/items}" sticky="ColumnHeaders" fixedLayout="false">
 			<items>
-				<ColumnListItem type="Navigation" press="handleColumnListItemPress">
+				<ColumnListItem press="handleColumnListItemPress">
 					<cells>
 						<VBox>
 							<Text text="{position_num}"/>

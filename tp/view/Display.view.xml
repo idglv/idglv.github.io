@@ -1,7 +1,7 @@
 <mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="tp.TrainingProgram.controller.Display"
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:t="sap.ui.table">
-	<Page title="{i18n>DISPLAY_TITLE}" showNavButton="true" navButtonPress="handleNavButtonPress">
-		<t:TreeTable rows="{/tree}" visibleRowCountMode="Auto" selectionMode="None">
+	<Page title="{i18n>DISPLAY_TITLE}">
+		<t:TreeTable rows="{/tree}" visibleRowCountMode="Auto" selectionMode="None" cellClick="handleCellClick">
 			<t:title>
 				<Toolbar>
 					<ToolbarSpacer/>
